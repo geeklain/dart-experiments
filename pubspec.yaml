@@ -1,0 +1,6 @@
+name: DartExperiments
+description: A simple project to experiment with dart
+dependencies:
+  js: any
+  browser: any
+  web_ui: any

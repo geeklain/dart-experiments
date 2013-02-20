@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- import the click-counter -->
+    <link rel="components" href="xclock.html">  
+  </head>
+  <body>
+    <element name="x-realtimeclock" constructor="RealTimeClock" extends="div">
+      <template>
+        <div>
+          <div>It is now: {{currentTimeStr}}</div>
+          <div is="x-clock" id="clock" time="{{currentTime}}"></div>
+        </div>
+      </template>
+      <script type="application/dart" src="xrealtimeclock.dart"></script>
+    </element>
+  </body>
+</html>

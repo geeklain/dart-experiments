@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="analogclock.css">
+    
+    <!-- import the click-counter -->
+    <link rel="components" href="xrealtimeclock.html">
+    <link rel="components" href="xdraggableclock.html">
+  </head>
+  <body>
+    <h1>Analog Clock</h1>
+    
+    <p id="subTitle">An HTML5 clock built using dart</p>
+    
+    <div id="content_container">
+      <div is="x-realtimeclock" style="float:left"></div>
+      <div is="x-draggableclock" style="float:left"></div>
+    </div>
+
+    <script type="application/dart" src="analogclock.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

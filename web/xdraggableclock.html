@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- import the click-counter -->
+    <link rel="components" href="xclock.html">  
+  </head>
+  <body>
+    <element name="x-draggableclock" constructor="DraggableClock" extends="div">
+      <template>
+        <div>
+          <div is="x-clock"
+               time="{{currentTime}}"
+               on-mouse-down="onMouseDownHandler($event)"
+               on-mouse-up="onMouseUpHandler($event)"
+               on-mouse-out="onMouseUpHandler($event)"
+               on-mouse-move="onMouseMoveHandler($event)"
+          ></div>
+        </div>
+      </template>
+      <script type="application/dart" src="xdraggableclock.dart"></script>
+    </element>
+  </body>
+</html>
