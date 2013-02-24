@@ -1,6 +1,7 @@
 import 'dart:html';
 import 'dart:math';
 import 'package:web_ui/web_ui.dart';
+import 'time.dart';
 
 class Clock extends WebComponent {
   
@@ -42,10 +43,10 @@ class Clock extends WebComponent {
   static const int SHADOW_OFFSET = 2;
   static const int SHADOW_BLUR = 7;
   
-  DateTime _time = new DateTime.now();
+  Time _time = new Time.now();
   
-  DateTime get time => _time;
-  set time(DateTime value) {
+  Time get time => _time;
+  set time(Time value) {
     if (_time != null && _time.compareTo(value) != 0) {
       _time = value;
       drawAnalogClock();

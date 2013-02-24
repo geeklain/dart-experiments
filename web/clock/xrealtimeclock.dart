@@ -2,13 +2,12 @@ import 'dart:html';
 import 'dart:async';
 import 'package:web_ui/web_ui.dart';
 import 'package:web_ui/watcher.dart' as watchers;
+import 'time.dart';
 
 class RealTimeClock extends WebComponent {
    
-  String currentTimeStr = 'HH:MM:SS';
-  DateTime currentTime = new DateTime.now();
-  
-  
+  Time currentTime = new Time.now();
+
   void created() {
     super.created();
     updateClock();
@@ -33,8 +32,7 @@ class RealTimeClock extends WebComponent {
   }
   
   void updateRealTime() {
-    currentTime = new DateTime.now();
-    currentTimeStr = formatTime(currentTime.hour, currentTime.minute, currentTime.second, currentTime.millisecond);
+    currentTime = new Time.now();
     // manually call the dispatch https://github.com/dart-lang/web-ui/issues/156
     watchers.dispatch();
   }

@@ -1,14 +1,24 @@
 import 'dart:html';
 import 'dart:math';
 import 'package:web_ui/web_ui.dart';
+import 'time.dart';
 
 class DraggableClock extends WebComponent {
   
-  DateTime currentTime = new DateTime.now();
+  Time currentTime = new Time.now();
+  String get currentTimeStr => currentTime.toString();
+  set currentTimeStr(String value) {
+    currentTime = new Time.fromString(value);
+  }
   
   bool _isDragging = false;
   Point _lastPoint;
-  DateTime _lastTime;
+  Time _lastTime;
+  
+  void created() {
+    super.created();
+    Time currentTime = new Time.now();
+  }
   
   void onMouseDownHandler(MouseEvent e) {
     _isDragging = true;
@@ -26,10 +36,11 @@ class DraggableClock extends WebComponent {
     Point currentPoint = new Point.fromTopLeft(e.offsetX, e.offsetY);
     num angle = currentPoint.angleTo(_lastPoint);
 
-    currentTime = _lastTime.add(new Duration(seconds: (angle * 1000).toInt()));
+    currentTime = _lastTime.addSeconds((angle * 1000).toInt());
     _lastTime = currentTime;
     _lastPoint = currentPoint;
   }
+  
 }
 
 class Point {

@@ -14,8 +14,9 @@
                on-mouse-down="onMouseDownHandler($event)"
                on-mouse-up="onMouseUpHandler($event)"
                on-mouse-out="onMouseUpHandler($event)"
-               on-mouse-move="onMouseMoveHandler($event)"
-          ></div>
+               on-mouse-move="onMouseMoveHandler($event)">
+          </div>
+          <input type="time" bind-value="currentTimeStr" />
         </div>
       </template>
       <script type="application/dart" src="xdraggableclock.dart"></script>
