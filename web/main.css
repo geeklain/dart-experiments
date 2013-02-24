@@ -11,7 +11,7 @@ h1, p {
   color: #333;
 }
 
-#tabHeaders {
+#tabs hgroup {
   border-bottom: 1px solid #ccc;
 }
 

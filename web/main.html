@@ -17,14 +17,17 @@
     to build different instances of an analog clock</p>
     
     <div id="tabs" is="x-tabs">
+      <hgroup>
         <header>Real-time Clock</header>
-        <article>
-          <div is="x-realtimeclock"></div>
-        </article>
         <header>Draggable Clock</header>
-        <article>
-          <div is="x-draggableclock"></div>
-        </article>
+        <div style="clear: both;"></div>
+      </hgroup>
+      <article>
+        <div is="x-realtimeclock"></div>
+      </article>
+      <article>
+        <div is="x-draggableclock"></div>
+      </article>
     </div>
 
     <script type="application/dart" src="main.dart"></script>
