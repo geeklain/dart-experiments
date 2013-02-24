@@ -43,6 +43,7 @@ class Clock extends WebComponent {
   static const int SHADOW_BLUR = 7;
   
   DateTime _time = new DateTime.now();
+  
   DateTime get time => _time;
   set time(DateTime value) {
     if (_time != null && _time.compareTo(value) != 0) {
@@ -58,7 +59,7 @@ class Clock extends WebComponent {
 
   
   void drawAnalogClock() {
-    CanvasElement canvas = _root.query("#canvas")
+    CanvasElement canvas = this.shadowRoot.query("#canvas")
     ..width = TOTAL_WIDTH
     ..height = TOTAL_WIDTH;
     CanvasRenderingContext2D context = canvas.context2d;

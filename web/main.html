@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dart Experiments</title>
+    <link rel="stylesheet" href="main.css">
+    
+    <link rel="components" href="tabs/tabs.html">
+    <link rel="components" href="clock/xrealtimeclock.html">
+    <link rel="components" href="clock/xdraggableclock.html">
+  </head>
+  <body>
+    <h1>Dart Experiments</h1>
+    
+    <p>Experimenting with Dart and Web UI
+    to build different instances of an analog clock</p>
+    
+    <div id="tabs" is="x-tabs">
+        <header>Real-time Clock</header>
+        <article>
+          <div is="x-realtimeclock"></div>
+        </article>
+        <header>Draggable Clock</header>
+        <article>
+          <div is="x-draggableclock"></div>
+        </article>
+    </div>
+
+    <script type="application/dart" src="main.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

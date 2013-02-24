@@ -5,5 +5,5 @@ import 'package:web_ui/web_ui.dart';
 // http://www.dartlang.org/articles/dart-web-components/
 void main() {
   
-  //useShadowDom = true; // to enable use of experimental Shadow DOM in the browser  
+  useShadowDom = true; // to enable use of experimental Shadow DOM in the browser  
 }

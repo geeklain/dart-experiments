@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+  <head>  
+  </head>
+  <body>
+    <element name="x-tabs" constructor="Tabs" extends="div" apply-author-styles>
+      <template>
+        <div id="tabHeaders">
+          <content select="header"></content>
+          <div style="clear:both;"></div>
+        </div>
+        <div id="tabContents">
+          <content select="article:nth-of-type(1)"></content>
+        </div>
+      </template>
+      <script type="application/dart" src="tabs.dart"></script>
+    </element>
+  </body>
+</html>
