@@ -8,6 +8,12 @@ class Time implements Comparable {
   
   Time.now() : this.fromDateTime(new DateTime.now());
   
+  Time.fromTime(Time time) {
+    hour = time.hour;
+    minute = time.minute;
+    second = time.second;
+  }
+  
   Time.fromDateTime(DateTime time) {
     hour = time.hour;
     minute = time.minute;
